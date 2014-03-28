@@ -32,6 +32,11 @@ class Account(Resource):
 
         account = cloudant.Account()
         account._session.auth = (username, password)
+
+	Connect to a CouchDB instance at a given uri, here "localhost:5984"
+    (default).
+
+        account = cloudant.Account(uri="http://localhost:5984")
     """
 
     def __init__(self, uri="http://localhost:5984", **kwargs):
