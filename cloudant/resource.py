@@ -71,7 +71,7 @@ class Resource(object):
             if urlparse.urlparse(path).scheme:
                 return path
             else:
-                return '/'.join([self.uri, path])
+                return urlparse.urljoin(self.uri, path)
         else:
             return self.uri
 
