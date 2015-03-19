@@ -70,7 +70,8 @@ class Database(Resource):
             for doc in db.all_docs():
                 print doc
         """
-        return Index(self._make_url('_all_docs'), session=self._session, **kwargs)
+        opts = dict(self.opts, **kwargs)
+        return Index(self._make_url('_all_docs'), session=self._session, **opts)
 
     def __iter__(self):
         """Formats `Database.all_docs` for use as an iterator."""
