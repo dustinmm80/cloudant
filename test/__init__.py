@@ -235,7 +235,10 @@ class DatabaseTest(ResourceTest):
         assert self.db.revs_diff(revs).status_code == 200
 
     def tearDown(self):
-        assert self.db.delete().status_code == 200
+        resp = self.db.delete()
+        stcode = resp.status_code
+        print 'status code ' + str(stcode)
+        assert stcode == 200
 
 
 class DocumentTest(ResourceTest):
