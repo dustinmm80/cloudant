@@ -6,3 +6,6 @@ build
 dist
 .coverage
 .DS_STORE
+
+# pycharm project dir 
+.idea
