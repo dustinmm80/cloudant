@@ -64,6 +64,13 @@ print response.json()
 # {'ok': True}
 ```
 
+Connect to a CouchDB instance:
+
+```python
+# in this case, http://localhost:5984
+account = cloudant.Account(uri="http://localhost:5984")
+```
+
 HTTP requests return [Response][responses] objects, right from [Requests][requests].
 
 Cloudant-Python can also make asynchronous requests by passing `async=True` to an object's constructor, like so:

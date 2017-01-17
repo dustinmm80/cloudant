@@ -67,6 +67,13 @@ with CouchDB or Cloudant instances. Check it out:
     print response.json()
     # {'ok': True}
 
+Connect to a CouchDB instance:
+
+.. code:: python
+
+    # in this case, http://localhost:5984
+    account = cloudant.Account(uri="http://localhost:5984")
+
 HTTP requests return
 `Response <http://www.python-requests.org/en/latest/api/#requests.Response>`__
 objects, right from
